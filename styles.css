@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+:root {
+    --Background: #F3F3F3;
+    --Title-color: #A7A7A7;
+    --Text-color: #4E4E4E;
+    --Text-colorwhen-completed: #C9CDD1;
+    --filter: drop-shadow(0px 5.40459px 32.4276px #453F3F);
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--Background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Nunito, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.cover {
+    filter: var(--filter);
+}
+
+.content {
+    background: #fff;
+    border-radius: 0 32px 32px 0;
+    padding: 60px 80px;
+    height: 400px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: .75rem;
+    color: var(--Title-color);
+    font-weight: bold;
+    letter-spacing: .2rem;
+    margin-bottom: 40px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Any span that is next to a checkbox */
+input[type="checkbox"] + span {
+    background: url('./images/checkbox--unchecked.svg') left top no-repeat;
+    background-size: 20px 20px;
+    min-height: 20px;
+    padding-left: 30px;
+}
+
+input[type="checkbox"]:checked + span {
+    background: url('./images/checkbox--checked.svg') left top no-repeat;
+    background-size: 20px 20px;
+    min-height: 20px;
+    padding-left: 30px;
+    color: var(--Text-colorwhen-completed);
+    text-decoration: line-through;
+}
+
+
+ul li {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+label {
+    cursor: pointer;
+}
